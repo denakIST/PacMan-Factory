@@ -59,13 +59,13 @@ function checkCollisions(item) {
   // TODO: detect collision with all walls and make pacman bounce
   pacMen.forEach((item) => {
             if(item.position.x + item.velocity.x + item.newimg.width > window.innerWidth || item.position.x + item.velocity.x < 0) item.velocity.x = -item.velocity.x;  // change direction of x
-                /* let's try changing image direction
-                if (item.velocity.x < 0) {
-                    item.newimg.src = 'PacMan3.png';
+                // let's try changing image direction
+               if (item.velocity.x < 0) {
+                    item.newimg.src = './images/PacMan3.png';
                 }
                 else {
-                    item.newimg.src = 'PacMan1.png'
-                }*/
+                    item.newimg.src = './images/PacMan1.png';
+                }
             
             if(item.position.y + item.velocity.y + item.newimg.height > window.innerHeight || item.position.y + item.velocity.y < 0) 
                 item.velocity.y = -item.velocity.y;  // change direction of y
